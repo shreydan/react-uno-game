@@ -1,0 +1,7 @@
+.player, .opponent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1em 0;
+    justify-content: center;
+}

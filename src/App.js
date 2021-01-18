@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import React, { useContext } from 'react'
 import './App.css';
+import Opponent from './Components/Opponent';
+import Player from './Components/Player';
+import {GameContext} from './Contexts/GameContext';
 
 function App() {
+
+  const {player, opponent} = useContext(GameContext);
+  const [playerCards, setPlayerCards] = player;
+  const [oppCards, setOppCards] = opponent;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Opponent length={oppCards.length}/>
+      <Player cards={playerCards}/>
     </div>
   );
 }
