@@ -6,10 +6,12 @@ export const GameProvider = props => {
 
     const [playerCards, setPlayerCards] = useState(cardGenerator(7));
     const [oppCards, setOppCards] = useState(cardGenerator(7));
+    const [activeCard, setActiveCard] = useState({"value": null, "color": null});
 
     const value = {
         player: [playerCards, setPlayerCards],
-        opponent: [oppCards, setOppCards]
+        opponent: [oppCards, setOppCards],
+        active: [activeCard, setActiveCard]
     }
 
     return (

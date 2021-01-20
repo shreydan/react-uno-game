@@ -1,7 +1,7 @@
 .card, .opponentCard {
     color: white;
-    width: 16.8vh;
-    height: 26.67vh;
+    width: 16.8vh !important;
+    height: 26.67vh !important;
     border-radius: 0.5rem;
     font-size: 1rem;
     padding-top: 1%;
@@ -35,4 +35,10 @@
 }
 .opponentCard div {
     transform: rotate(-35deg);
+}
+
+.activeCardcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
