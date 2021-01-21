@@ -42,3 +42,9 @@
     align-items: center;
     justify-content: center;
 }
+.activeCardcontainer * div{
+    align-items: flex-start;
+    padding: 0;
+    padding-top: 5%;
+    padding-left: 5%;
+}
