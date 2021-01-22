@@ -12,7 +12,7 @@ function Player(props) {
                     return <Card text={card.value} 
                                  color={card.color} 
                                  zIndex={key}
-                                 onclick={console.log(card.value,card.color)}
+                                 
                             />
                   })
             }
