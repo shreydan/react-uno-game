@@ -8,9 +8,9 @@ import {GameContext} from './Contexts/GameContext';
 function App() {
 
   const {player, opponent, active} = useContext(GameContext);
-  const [playerCards, setPlayerCards] = player;
-  const [oppCards, setOppCards] = opponent;
-  const [activeCard, setActiveCard] = active;
+  const [playerCards] = player;
+  const [oppCards] = opponent;
+  const [activeCard] = active;
   return (
     <div className="App">
       <Opponent length={oppCards.length}/>

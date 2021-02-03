@@ -22,15 +22,15 @@ export function cardGenerator(n) {
             var colorCardValue = chance.weighted(colorCardValues,colorCardWeights);
             var color = colors[Object.keys(colors)[Math.floor(Math.random()*Object.keys(colors).length)]];
             card = {
-                "value": colorCardValue,
-                "color": color
+                value: colorCardValue,
+                color: color
             }
         }
         else {
             var wildCardValue = wildCardValues[Math.floor(Math.random()*wildCardValues.length)];
             card = {
-                "value": wildCardValue,
-                "color": "black"
+                value: wildCardValue,
+                color: "black"
             }
         }
 
@@ -54,8 +54,8 @@ export function startingCard() {
     var color = colors[Object.keys(colors)[Math.floor(Math.random()*Object.keys(colors).length)]];
 
     return ({
-                "value": colorCardValue,
-                "color": color
+                value: colorCardValue,
+                color: color
             })
 
 }

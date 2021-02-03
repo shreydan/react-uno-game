@@ -1,10 +1,8 @@
 export const checkPlayable = (activeCard, currentCard) => {
-    const [activeValue, activeColor] = activeCard;
-    const [currentValue, currentColor] = currentCard;
-
+    console.log(activeCard[0], currentCard)
     var clickable = false;
+    if(activeCard[0].value === currentCard.value || activeCard[0].color === currentCard.color) {
 
-    if(activeValue === currentValue || activeColor === currentColor) {
         clickable = true;
     }
 

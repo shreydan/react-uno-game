@@ -8,8 +8,8 @@ function Card(props) {
         <div className="card"
             style={{"backgroundColor": props.color, "zIndex": props.zIndex}}>
             {
-                cardchars.map((letter) => {
-                return <div>{letter}</div>
+                cardchars.map((letter, key) => {
+                return <div key={key}>{letter}</div>
                 })
             }
         </div>

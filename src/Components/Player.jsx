@@ -4,9 +4,16 @@ import './Player.css'
 import Card from '../Components/Card';
 import {checkPlayable} from '../cardHandler';
 
+
 function Player(props) {
-    var cards = props.cards;
     const {active} = useContext(GameContext);
+    var cards = []
+    props.cards.forEach(card => {
+        var playable = {playable: checkPlayable(active, card)}
+        card = {...card, ...playable}
+        cards.push(card)
+    })
+    console.log(cards)
     return (
         <div className="player">
             {
@@ -14,7 +21,7 @@ function Player(props) {
                     return <Card text={card.value} 
                                  color={card.color} 
                                  zIndex={key}
-                                 
+                                 key = {key}
                             />
                   })
             }

@@ -8,7 +8,7 @@ function Opponent(props) {
         {
             Array.from(Array(props.length), (_,x)=>x).map((key) => {
                 return(
-                    <div className="opponentCard" style={{zIndex: key}}>
+                    <div className="opponentCard" key={key} style={{zIndex: key}}>
                         <div>UNO!</div>
                     </div>
                 )
