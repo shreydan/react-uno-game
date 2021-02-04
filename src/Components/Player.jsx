@@ -6,13 +6,24 @@ import {checkPlayable} from '../cardHandler';
 
 
 function Player(props) {
-    const {active} = useContext(GameContext);
+    const {active, turn} = useContext(GameContext);
     var cards = []
     props.cards.forEach(card => {
         var playable = {playable: checkPlayable(active, card)}
-        card = {...card, ...playable}
+        card = {...card, ...playable} // combines 2 objects
         cards.push(card)
     })
+
+    const playCard = card => {
+        if(card.playable && turn.playerTurn === 1) {
+            console.log('playable')
+            active.setActiveCard(card)
+        }
+        else {
+            console.log('not playable')
+        }
+    }
+
     console.log(cards)
     return (
         <div className="player">
@@ -22,6 +33,7 @@ function Player(props) {
                                  color={card.color} 
                                  zIndex={key}
                                  key = {key}
+                                 playCard={playCard(card)}
                             />
                   })
             }
