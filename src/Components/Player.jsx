@@ -14,13 +14,14 @@ function Player(props) {
         cards.push(card)
     })
 
-    const playCard = card => {
-        if(card.playable && turn.playerTurn === 1) {
+    const cardPlayable = card => {
+        if(card.playable && turn[0] === 1) {
             console.log('playable')
-            active.setActiveCard(card)
+            return true;
         }
         else {
             console.log('not playable')
+            return false
         }
     }
 
@@ -33,7 +34,7 @@ function Player(props) {
                                  color={card.color} 
                                  zIndex={key}
                                  key = {key}
-                                 playCard={playCard(card)}
+                                 cardPlayable={cardPlayable(card)}
                             />
                   })
             }
