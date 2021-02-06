@@ -7,10 +7,11 @@ function ActiveCard(props) {
         card.value = ""
         card.color = "#aeaeae";
     }
+    const deg = (Math.round(Math.random()*(15)) * (Math.round(Math.random()) ? 1:-1)).toString()+"deg"
 
     return (
         <div className="activeCardcontainer">
-            <Card text={card.value} color={card.color} zIndex={1}/>
+            <Card text={card.value} color={card.color} zIndex={1} rotation={deg}/>
         </div>
     )
 }

@@ -35,6 +35,7 @@ function Player(props) {
                                  zIndex={key}
                                  key = {key}
                                  cardPlayable={cardPlayable(card)}
+                                 rotation={'0deg'}
                             />
                   })
             }

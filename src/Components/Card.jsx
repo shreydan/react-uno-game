@@ -11,7 +11,7 @@ function Card(props) {
     const card = {value: props.text, color: props.color}
     return(
         <div className="card"
-            style={{"backgroundColor": props.color, "zIndex": props.zIndex}}
+            style={{"backgroundColor": props.color, "zIndex": props.zIndex, 'transform': `rotate(${props.rotation})`}}
             onClick={props.cardPlayable ? ()=> setActiveCard(card) : () => console.log('cant play')}
             >
             {
