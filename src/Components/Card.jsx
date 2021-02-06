@@ -4,14 +4,19 @@ import React, { useContext } from 'react'
 
 
 function Card(props) {
-    
     const {active} = useContext(GameContext);
     const [, setActiveCard] = active;
     var cardchars = props.text.split('');
     const card = {value: props.text, color: props.color}
+
+    const cardStyles = {"backgroundColor": props.color, 
+                        "zIndex": props.zIndex,
+                        "transform": `rotate(${props.rotation})`
+                    }
+
     return(
         <div className="card"
-            style={{"backgroundColor": props.color, "zIndex": props.zIndex, 'transform': `rotate(${props.rotation})`}}
+            style={cardStyles}
             onClick={props.cardPlayable ? ()=> setActiveCard(card) : () => console.log('cant play')}
             >
             {
