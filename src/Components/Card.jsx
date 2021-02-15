@@ -10,7 +10,8 @@ function Card(props) {
     const card = {value: props.text, color: props.color}
     const cardStyles = {"backgroundColor": props.color, 
                         "zIndex": props.zIndex,
-                        "transform": `rotate(${props.rotation}) translateY(${props.cardPlayable ? '-5%' : '0%'})`
+                        "transform": `rotate(${props.rotation}) translateY(${props.cardPlayable ? '-5%' : '0%'})`,
+                        "transitionDuration": '0.3s'
                     }
 
     return(
