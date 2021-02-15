@@ -1,0 +1,26 @@
+.Modal {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    width: 80vh;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 0px 25px 50px -22px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 25px 50px -22px rgba(0,0,0,1);
+    box-shadow: 0px 25px 50px -22px rgba(0,0,0,1);
+}
+#msg {
+    font-size: 4em;
+}
+#esc {
+    font-size: 1em;
+    color: #3d3d3d;
+}
