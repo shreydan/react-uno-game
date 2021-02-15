@@ -8,10 +8,9 @@ function Card(props) {
     const [, setActiveCard] = active;
     var cardchars = props.text.split('');
     const card = {value: props.text, color: props.color}
-
     const cardStyles = {"backgroundColor": props.color, 
                         "zIndex": props.zIndex,
-                        "transform": `rotate(${props.rotation})`
+                        "transform": `rotate(${props.rotation}) translateY(${props.cardPlayable ? '-5%' : '0%'})`
                     }
 
     return(
